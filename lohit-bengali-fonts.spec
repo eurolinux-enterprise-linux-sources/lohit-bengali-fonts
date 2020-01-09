@@ -3,7 +3,7 @@
 
 Name:           %{fontname}-fonts
 Version:        2.4.3
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Free Bengali font
 
 Group:          User Interface/X
@@ -17,6 +17,7 @@ BuildRequires:  fontpackages-devel
 Requires:       fontpackages-filesystem
 Obsoletes: lohit-fonts-common < %{version}-%{release}
 Patch1: bug-586854.patch
+Patch2: bug-691285.patch
 
 %description
 This package provides a free Bengali truetype/opentype font.
@@ -25,6 +26,7 @@ This package provides a free Bengali truetype/opentype font.
 %prep
 %setup -q -n %{fontname}-%{version} 
 %patch1 -p1 -b .1-fontconf_fix
+%patch2 -p1 -b .1-added-rupee-sign
 
 
 %build
@@ -55,6 +57,9 @@ rm -fr %{buildroot}
 
 
 %changelog
+* Fri Jun 01 2011 Pravin Satpute <psatpute@redhat.com> - 2.4.3-6
+- Resolves: bug 691285
+
 * Tue May 04 2010 Pravin Satpute <psatpute@redhat.com> - 2.4.3-5
 - Resolves: bug 586854
 
