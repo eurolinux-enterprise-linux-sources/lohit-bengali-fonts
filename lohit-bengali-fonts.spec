@@ -3,7 +3,7 @@
 
 Name:        %{fontname}-fonts
 Version:        2.5.3
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Free Bengali font
 Group:          User Interface/X
 License:        OFL
@@ -49,6 +49,9 @@ ln -s %{_fontconfig_templatedir}/%{fontconf} \
 
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 2.5.3-4
+- Mass rebuild 2013-12-27
+
 * Wed May 29 2013 Pravin Satpute <psatpute@redhat.com> - 2.5.3-3
 - Resolved #959994 - Removed 'as' from fc-cache
 
